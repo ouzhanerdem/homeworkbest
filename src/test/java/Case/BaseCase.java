@@ -1,14 +1,18 @@
 package Case;
 
-public class BaseCase {
-    private String token;
-    private String username;
-    private String password;
+import org.testng.annotations.DataProvider;
 
-    public BaseCase(String token, String username, String password) {
-        this.token = token;
-        this.username = username;
-        this.password = password;
-        //request something take return token
+public class BaseCase {
+
+    @DataProvider(name = "dataForSearchGetCase")
+    public Object[] dataForGet(){
+        String[][] objects = {
+                {"Harry Potter","Harry Potter and the Deathly Hallows: Part 2"}
+        };
+        return objects;
+
     }
+           
+                
+
 }
