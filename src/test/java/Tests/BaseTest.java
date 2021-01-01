@@ -27,11 +27,12 @@ public class BaseTest {
                 .param(key, apiKey)
                 .get(url).then().body(param, equalTo(expectedResult));
     }
-    public void check_IsParamExist(String param){
+    public void check_IsParamExist(String searchKey,String param, String searchWord){
+
 
         given()
-                .param("t","Harry+Potter")
-                .param(key, "d1b66b77")
+                .param(searchKey,searchWord)
+                .param(key, apiKey)
                 .get(url).then().body("$",hasKey(param));
     }
 
