@@ -8,8 +8,8 @@ public class SearchTest extends BaseTest{
     public void check_StatusCode200(){
         check_StatusCode(200);
     }
-    public void check_IsParamExisting(String nameParam){
-        check_IsParamExist(nameParam);
+    public void check_IsParamExisting(String nameParam, String searchWord){
+        check_IsParamExist("t",nameParam, searchWord);
     }
     public void check_MovieExit(String searchName, String expectedResult ){
         check_ValueOfParam("Title",searchName,expectedResult);
